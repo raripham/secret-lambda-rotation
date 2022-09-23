@@ -1,0 +1,30 @@
+{
+    "Version" : "2012-10-17",
+    "Statement" : [ {
+      "Sid" : "VisualEditor1",
+      "Effect" : "Allow",
+      "Principal" : {
+        "AWS" : [ 
+            "arn:aws:sts::132672814081:assumed-role/AWSReservedSSO_AWSReservedSSO_AWS_Sadaqah_f589602c8482664d/trongpham@tdt.asia", 
+            "arn:aws:sts::132672814081:assumed-role/secret-lambda-access-role/rotation-secret-mq" ]
+      },
+      "Action" : "secretsmanager:*",
+      "Resource" : "arn:aws:secretsmanager:us-east-1:132672814081:secret:testkeymq-3rQHii"
+    }, {
+      "Sid" : "VisualEditor2",
+      "Effect" : "Deny",
+      "Principal" : "*",
+      "Action" : [ 
+          "secretsmanager:GetSecretValue", 
+          "secretsmanager:DescribeSecret" ],
+      "Resource" : "arn:aws:secretsmanager:us-east-1:132672814081:secret:testkeymq-3rQHii",
+      "Condition" : {
+        "StringNotEquals" : {
+          "aws:UserId" : [ 
+              "AROAR5Y7KPQATMTCAVYWP:trongpham@tdt.asia", 
+              "AROAR5Y7KPQAYNNFJTNCG:i-0c883740f58bc941f", 
+              "AROAR5Y7KPQA6TBPT2WQY:rotation-secret-mq" ]
+        }
+      }
+    } ]
+  }
