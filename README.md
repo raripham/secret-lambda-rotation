@@ -7,10 +7,10 @@
 ### + Permission
       SecretsManagerAccess
    ![image](https://user-images.githubusercontent.com/94727826/197728785-aa25ee7c-097a-4015-b336-052f8ec7ae87.png)
-### + VPC
+### + add VPC for lambda
       select subnet private with natgateway to can call API of secret manager
    ![image](https://user-images.githubusercontent.com/94727826/197729676-0a853c2d-02b5-4f2d-b6b1-acc60e17cbf1.png)
-### + EndPoint lambda (subnet private added above)
+### + EndPoint lambda(setup in VPC) (subnet private added above)
    ![image](https://user-images.githubusercontent.com/94727826/197730105-ffb61c2e-1d7e-45cc-8c1d-dedbf0e09545.png)
 
 # permission for secret manager
