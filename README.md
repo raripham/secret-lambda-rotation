@@ -13,3 +13,7 @@
 ### + EndPoint lambda (subnet private added above)
    ![image](https://user-images.githubusercontent.com/94727826/197730105-ffb61c2e-1d7e-45cc-8c1d-dedbf0e09545.png)
 
+### + permission for secret manager
+      condition: usage SSO
+   ![image](https://user-images.githubusercontent.com/94727826/197735666-aa2d8c4a-7d81-4add-b63c-6cd34c6c0718.png)
+       To get role ID of lambda function: use CloudTrail to check
