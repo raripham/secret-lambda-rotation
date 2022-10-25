@@ -15,8 +15,8 @@
 
 # permission for secret manager
       condition: usage SSO
+      To get role ID of lambda function: use CloudTrail to check
    ![image](https://user-images.githubusercontent.com/94727826/197735666-aa2d8c4a-7d81-4add-b63c-6cd34c6c0718.png)
-       To get role ID of lambda function: use CloudTrail to check
 # Note in lambda_function.py file
       change with desired region
    ![image](https://user-images.githubusercontent.com/94727826/197737340-1957343f-30c4-4f0c-b176-51f8501ed597.png)

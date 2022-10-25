@@ -1,0 +1,43 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": "logs:CreateLogGroup",
+            "Resource": "arn:aws:logs:us-east-1:201717350410:*"
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource": [
+                "arn:aws:logs:us-east-1:201717350410:log-group:/aws/lambda/test-rotation-container:*"
+            ]
+        },
+        {
+            "Sid": "VisualEditor2",
+            "Effect": "Allow",
+            "Action": [
+                "secretsmanager:GetSecretValue",
+                "secretsmanager:DescribeSecret",
+                "secretsmanager:PutSecretValue",
+                "secretsmanager:UpdateSecretVersionStage"
+            ],
+            "Resource": [
+                "arn:aws:secretsmanager:us-east-1:201717350410:secret:PostgreSQL/thetrong1-ikIwpu"
+            ]
+        },
+        {
+	    "Sid": "VisualEditor3",
+            "Effect": "Allow",
+            "Action": [
+                "secretsmanager:GetRandomPassword"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
